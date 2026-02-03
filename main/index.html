@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БГИТУ IT-Институт — IT-образование в Брянске</title>
+  <meta name="description" content="IT-образование в БГИТУ: кибербезопасность, искусственный интеллект, программная инженерия. Практика с 3 курса, трудоустройство после выпуска.">
+  <meta name="author" content="БГИТУ">
+  
+  <meta property="og:title" content="БГИТУ IT-Институт — IT-образование в Брянске">
+  <meta property="og:description" content="Образовательный и карьерный трек в IT с гарантией трудоустройства. 5 направлений подготовки, практика в ведущих компаниях.">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="header-nav">
+        <a href="#" class="logo">
+          БГИТУ <span class="logo-accent">IT-Институт</span>
+        </a>
+        
+        <ul class="nav-links">
+          <li><button class="nav-link" data-target="directions">Направления</button></li>
+          <li><button class="nav-link" data-target="disciplines">Дисциплины</button></li>
+          <li><button class="nav-link" data-target="features">Преимущества</button></li>
+          <li><button class="nav-link" data-target="faculty">Преподаватели</button></li>
+          <li><button class="nav-link" data-target="roadmap">Учебный план</button></li>
+        </ul>
+        
+        <a href="https://priem.bgitu.ru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta">
+          Подать заявление
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <h1 class="hero-title">
+              IT-образование
+              <br>
+              <span class="text-muted-foreground">в БГИТУ</span>
+            </h1>
+            
+            <p class="hero-description">
+              Образовательный и карьерный трек с последующим трудоустройством. 
+              Практика с 3 курса, работа в IT-компаниях региона.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="https://priem.bgitu.ru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                Подать заявление
+              </a>
+              <a href="#directions" class="btn btn-outline btn-lg">
+                Узнать больше
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="squares-composition">
+              <div class="square square-1 bg-pastel-sky"></div>
+              <div class="square square-2 bg-pastel-mint"></div>
+              <div class="square square-3 bg-pastel-peach"></div>
+              <div class="square square-4 bg-pastel-lavender"></div>
+              <div class="square square-5 bg-pastel-coral"></div>
+              <div class="square square-6 bg-pastel-sage"></div>
+              <div class="square square-7 bg-secondary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Directions Section (Carousel) -->
+    <section id="directions" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Направления обучения</h2>
+          <p class="section-description">
+            Выберите программу, соответствующую вашим интересам и карьерным целям
+          </p>
+        </div>
+
+        <div class="directions-carousel">
+          <div class="directions-track-wrap">
+            <button type="button" class="directions-arrow directions-prev" id="directionsPrev" aria-label="Предыдущее направление">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="directions-arrow directions-next" id="directionsNext" aria-label="Следующее направление">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="directions-track" id="directionsTrack"></div>
+          </div>
+          <div class="directions-dots" id="directionsDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Disciplines Section -->
+    <section id="disciplines" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Технологический стек</h2>
+          <p class="section-description">
+            Изучайте востребованные технологии под руководством практикующих специалистов
+          </p>
+        </div>
+        
+        <div class="disciplines-grid">
+          <!-- Java -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-coral"></div>
+            <h3 class="discipline-title">Java</h3>
+            <p class="discipline-description">
+              Разработка серверных приложений, ООП, среды разработки
+            </p>
+          </div>
+          
+          <!-- Python -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-mint"></div>
+            <h3 class="discipline-title">Python</h3>
+            <p class="discipline-description">
+              Машинное обучение, нейросети, прикладная разработка
+            </p>
+          </div>
+          
+          <!-- 1С -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-peach"></div>
+            <h3 class="discipline-title">1С</h3>
+            <p class="discipline-description">
+              Разработка бизнес-приложений, адаптация конфигураций
+            </p>
+          </div>
+          
+          <!-- Frontend -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-sky"></div>
+            <h3 class="discipline-title">Frontend</h3>
+            <p class="discipline-description">
+              HTML/CSS, React, современные JavaScript-фреймворки
+            </p>
+          </div>
+          
+          <!-- Mobile -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-lavender"></div>
+            <h3 class="discipline-title">Mobile</h3>
+            <p class="discipline-description">
+              Кроссплатформенная и нативная мобильная разработка
+            </p>
+          </div>
+          
+          <!-- QA -->
+          <div class="discipline-card hover-lift reveal" data-stagger>
+            <div class="discipline-icon bg-pastel-sage"></div>
+            <h3 class="discipline-title">QA & Testing</h3>
+            <p class="discipline-description">
+              Тестирование ПО, автоматизация, контроль качества
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Преимущества обучения</h2>
+          <p class="section-description">
+            От первого курса до трудоустройства — непрерывный путь развития
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card hover-lift reveal" data-stagger>
+            <div class="feature-icon bg-pastel-sky">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <div class="feature-header">
+                <h3 class="feature-title">Кибербезопасность</h3>
+                <span class="feature-subtitle">Защита инфраструктуры</span>
+              </div>
+              <p class="feature-description">
+                Изучение методов защиты программных комплексов и сетей. Анализ уязвимостей и пентестинг.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="feature-card hover-lift reveal" data-stagger>
+            <div class="feature-icon bg-pastel-mint">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <div class="feature-header">
+                <h3 class="feature-title">Проектная работа</h3>
+                <span class="feature-subtitle">С 1 курса</span>
+              </div>
+              <p class="feature-description">
+                Совместная работа над реальными IT-проектами в командах под руководством наставников.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="feature-card hover-lift reveal" data-stagger>
+            <div class="feature-icon bg-pastel-peach">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                <rect width="20" height="14" x="2" y="6" rx="2"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <div class="feature-header">
+                <h3 class="feature-title">Практика</h3>
+                <span class="feature-subtitle">С 3 курса</span>
+              </div>
+              <p class="feature-description">
+                Оплачиваемые стажировки в компаниях-партнёрах. Зарплата от 20 000 ₽ в месяц.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Feature 4 -->
+          <div class="feature-card hover-lift reveal" data-stagger>
+            <div class="feature-icon bg-pastel-lavender">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                <path d="M22 10v6"/>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <div class="feature-header">
+                <h3 class="feature-title">Трудоустройство</h3>
+                <span class="feature-subtitle">После выпуска</span>
+              </div>
+              <p class="feature-description">
+                Карьерный трек с гарантией работы. Зарплата выпускников до 150 000 ₽ в месяц.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Faculty Section -->
+    <section id="faculty" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Преподаватели из IT-индустрии</h2>
+          <p class="section-description">
+            Занятия ведут практикующие специалисты ведущих IT-компаний региона
+          </p>
+        </div>
+        
+        <div class="faculty-grid">
+          <!-- Faculty 1 -->
+          <div class="faculty-card hover-lift reveal" data-stagger>
+            <div class="faculty-photo bg-pastel-sky"></div>
+            <h3 class="faculty-name">Иванов И.И.</h3>
+            <p class="faculty-company">TechSoft</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Java</span>
+              <span class="faculty-tag">Backend архитектура</span>
+            </div>
+          </div>
+          
+          <!-- Faculty 2 -->
+          <div class="faculty-card hover-lift reveal" data-stagger>
+            <div class="faculty-photo bg-pastel-mint"></div>
+            <h3 class="faculty-name">Петрова А.С.</h3>
+            <p class="faculty-company">DataCorp</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Аналитика данных</span>
+              <span class="faculty-tag">Python</span>
+            </div>
+          </div>
+          
+          <!-- Faculty 3 -->
+          <div class="faculty-card hover-lift reveal" data-stagger>
+            <div class="faculty-photo bg-pastel-peach"></div>
+            <h3 class="faculty-name">Сидоров В.К.</h3>
+            <p class="faculty-company">SoftSol</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">1С-разработка</span>
+              <span class="faculty-tag">Бизнес-аналитика</span>
+            </div>
+          </div>
+          
+          <!-- Faculty 4 -->
+          <div class="faculty-card hover-lift reveal" data-stagger>
+            <div class="faculty-photo bg-pastel-lavender"></div>
+            <h3 class="faculty-name">Козлова М.А.</h3>
+            <p class="faculty-company">ГК Иннотех</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Frontend</span>
+              <span class="faculty-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Учебный план</h2>
+          <p class="section-description">
+            8 семестров интенсивного обучения — от основ до профессиональной разработки
+          </p>
+        </div>
+        
+        <!-- Tooltip -->
+        <div id="course-tooltip" class="course-tooltip"></div>
+        
+        <div class="roadmap-wrapper reveal">
+          <div class="roadmap-container">
+            <!-- Semester headers -->
+            <div class="roadmap-headers">
+              <div class="semester-header">1 сем.</div>
+              <div class="semester-header">2 сем.</div>
+              <div class="semester-header">3 сем.</div>
+              <div class="semester-header">4 сем.</div>
+              <div class="semester-header">5 сем.</div>
+              <div class="semester-header">6 сем.</div>
+              <div class="semester-header">7 сем.</div>
+              <div class="semester-header">8 сем.</div>
+            </div>
+            
+            <!-- Course rows -->
+            <div class="roadmap-rows" id="roadmap-grid"></div>
+            
+            <!-- Year markers -->
+            <div class="year-markers">
+              <div class="year-marker">1 курс</div>
+              <div class="year-marker">2 курс</div>
+              <div class="year-marker">3 курс</div>
+              <div class="year-marker">4 курс</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-section">
+          <h3 class="footer-brand">
+            БГИТУ <span class="footer-brand-accent">IT-Институт</span>
+          </h3>
+          <p class="footer-description">
+            Образовательный и карьерный трек в IT с гарантией трудоустройства
+          </p>
+          <a href="https://priem.bgitu.ru" target="_blank" rel="noopener noreferrer" class="btn btn-primary footer-cta">
+            Подать заявление
+          </a>
+        </div>
+        
+        <!-- Contacts -->
+        <div class="footer-section">
+          <h4 class="footer-heading">Контакты</h4>
+          <ul class="footer-contacts">
+            <li class="footer-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <a href="mailto:it@bgitu.ru">it@bgitu.ru</a>
+            </li>
+            <li class="footer-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+7 (4832) XX-XX-XX</span>
+            </li>
+            <li class="footer-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>г. Брянск, пр-т Станке Димитрова, 3</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Links -->
+        <div class="footer-section">
+          <h4 class="footer-heading">Разделы</h4>
+          <ul class="footer-links">
+            <li><a href="#directions">Направления</a></li>
+            <li><a href="#disciplines">Дисциплины</a></li>
+            <li><a href="#features">Преимущества</a></li>
+            <li><a href="#roadmap">Учебный план</a></li>
+          </ul>
+        </div>
+        
+        <!-- Social -->
+        <div class="footer-section">
+          <h4 class="footer-heading">Мы в соцсетях</h4>
+          <a href="https://vk.com/it_bgitu" target="_blank" rel="noopener noreferrer" class="footer-social">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4 8.657 4 8.18c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.814-.542 1.27-1.422 2.18-3.61 2.18-3.61.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/>
+            </svg>
+            vk.com/it_bgitu
+          </a>
+          
+          <div class="footer-squares">
+            <div class="footer-square bg-pastel-sky"></div>
+            <div class="footer-square bg-pastel-mint"></div>
+            <div class="footer-square bg-pastel-peach"></div>
+            <div class="footer-square bg-pastel-lavender"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © <span id="current-year"></span> БГИТУ IT-Институт. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
