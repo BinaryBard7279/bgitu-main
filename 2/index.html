@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноУнивер | Поступление 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Техно<span>Универ</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#directions">Направления</a></li>
+                    <li><a href="#disciplines">Дисциплины</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                </ul>
+            </nav>
+            <label class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <input type="checkbox" id="themeSwitch">
+                <span class="toggle-slider"></span>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Будущее IT начинается здесь</h1>
+            <p>Присоединяйтесь к ведущему технологическому университету. Получите востребованную профессию в сфере кибербезопасности, искусственного интеллекта и разработки программного обеспечения.</p>
+            <a href="#directions" class="btn">Выбрать направление</a>
+        </div>
+    </section>
+
+    <!-- Directions Section (Table 1) -->
+    <section id="directions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Направления обучения</h2>
+                <p>Выберите свою будущую профессию среди наших топовых программ бакалавриата.</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider-wrapper" id="directionsSlider">
+                    <!-- Card 1 -->
+                    <div class="slider-card">
+                        <h3>Кибербезопасность</h3>
+                        <p><strong>Квалификация:</strong> Бакалавр</p>
+                        <p><strong>Срок обучения:</strong> 4 года</p>
+                        <p><strong>Направление:</strong> Информационная безопасность</p>
+                        <p>Глубокая подготовка по защите данных, сетевой безопасности и криптографии.</p>
+                        <div class="meta">Бюджетные места: 15</div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="slider-card">
+                        <h3>Искусственный интеллект</h3>
+                        <p><strong>Квалификация:</strong> Бакалавр</p>
+                        <p><strong>Срок обучения:</strong> 4 года</p>
+                        <p><strong>Направление:</strong> Информатика и вычислительная техника (ИВТ)</p>
+                        <p>Изучение машинного обучения, нейросетей и анализа больших данных.</p>
+                        <div class="meta">Бюджетные места: 20</div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="slider-card">
+                        <h3>Разработка ПО</h3>
+                        <p><strong>Квалификация:</strong> Бакалавр</p>
+                        <p><strong>Срок обучения:</strong> 4 года</p>
+                        <p><strong>Направление:</strong> Программная инженерия</p>
+                        <p>Обучение современным языкам программирования и agile-методологиям.</p>
+                        <div class="meta">Бюджетные места: 25</div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="slider-card">
+                        <h3>Data Science</h3>
+                        <p><strong>Квалификация:</strong> Бакалавр</p>
+                        <p><strong>Срок обучения:</strong> 4 года</p>
+                        <p><strong>Направление:</strong> Прикладная информатика</p>
+                        <p>Анализ данных, визуализация и построение прогнозных моделей.</p>
+                        <div class="meta">Бюджетные места: 18</div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="slider-card">
+                        <h3>Робототехника</h3>
+                        <p><strong>Квалификация:</strong> Бакалавр</p>
+                        <p><strong>Срок обучения:</strong> 4 года</p>
+                        <p><strong>Направление:</strong> Мехатроника и робототехника</p>
+                        <p>Проектирование и программирование автономных роботизированных систем.</p>
+                        <div class="meta">Бюджетные места: 12</div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button id="dirPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button id="dirNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disciplines Section (Table 2) -->
+    <section id="disciplines" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ключевые дисциплины</h2>
+                <p>Погрузитесь в актуальные предметы, которые ведут практикующие специалисты.</p>
+            </div>
+            <div class="disciplines-grid">
+                <!-- Card 1 -->
+                <div class="discipline-card">
+                    <h4>Java</h4>
+                    <p><strong>Разработка приложений в среде Java</strong></p>
+                    <p>Изучение объектно-ориентированного программирования, фреймворков Spring и Hibernate, создание enterprise-приложений.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="discipline-card">
+                    <h4>Машинное обучение</h4>
+                    <p><strong>Алгоритмы и модели ML</strong></p>
+                    <p>От линейной регрессии до глубоких нейронных сетей. Работа с библиотеками Scikit-learn, TensorFlow, PyTorch.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="discipline-card">
+                    <h4>Сетевая безопасность</h4>
+                    <p><strong>Защита сетевых инфраструктур</strong></p>
+                    <p>Анализ уязвимостей, firewall, IDS/IPS, penetration testing. Практика на учебных стендах.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="discipline-card">
+                    <h4>Веб-технологии</h4>
+                    <p><strong>Frontend и Backend разработка</strong></p>
+                    <p>HTML5, CSS3, JavaScript (React), Node.js, базы данных. Полный цикл создания веб-приложений.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="discipline-card">
+                    <h4>Базы данных</h4>
+                    <p><strong>Проектирование и оптимизация SQL/NoSQL</strong></p>
+                    <p>MySQL, PostgreSQL, MongoDB. Написание сложных запросов, индексация, репликация.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Table 3) -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Особенности направлений</h2>
+                <p>Уникальные преимущества каждой программы, которые выделяют наших выпускников.</p>
+            </div>
+            <div class="features-container">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <h4>Кибербезопасность</h4>
+                    <div class="subtitle">Глубокая практика с первого курса</div>
+                    <p>Студенты работают на реальных стендах с имитацией атак и защит. Партнёрство с ведущими компаниями-разработчиками средств защиты (Kaspersky, Positive Technologies).</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <h4>Искусственный интеллект</h4>
+                    <div class="subtitle">Доступ к мощным вычислительным ресурсам</div>
+                    <p>Использование GPU-кластеров для обучения нейросетей. Участие в международных соревнованиях по машинному обучению (Kaggle).</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <h4>Разработка ПО</h4>
+                    <div class="subtitle">Agile-подход и командная работа</div>
+                    <p>Обучение построено по принципу scrum-спринтов. Студенты создают проекты в командах, презентуют их реальным заказчикам.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="feature-card">
+                    <h4>Data Science</h4>
+                    <div class="subtitle">Работа с Big Data</div>
+                    <p>Освоение Hadoop, Spark, Kafka. Анализ реальных дата-сетов от партнёров из fintech и e-commerce.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="feature-card">
+                    <h4>Робототехника</h4>
+                    <div class="subtitle">Собственный робототехнический полигон</div>
+                    <p>Возможность тестировать роботов на специальной площадке. Участие в соревнованиях RoboCup, Eurobot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section (Table 4) -->
+    <section id="teachers" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Занятия ведут представители IT-индустрии</h2>
+                <p>Практики из ведущих компаний, которые делятся актуальным опытом.</p>
+            </div>
+            <div class="teachers-grid">
+                <!-- Card 1 -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Александр Петров</h4>
+                        <p class="company">Хуесофт</p>
+                        <p>Ведущий архитектор безопасности. 10+ лет опыта.</p>
+                        <ul>
+                            <li>Криптография</li>
+                            <li>Сетевые атаки и защита</li>
+                            <li>Аудит ИБ</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Мария Смирнова</h4>
+                        <p class="company">DataRock</p>
+                        <p>Head of Data Science. Эксперт по ML.</p>
+                        <ul>
+                            <li>Машинное обучение</li>
+                            <li>Глубокие нейросети</li>
+                            <li>Computer Vision</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Дмитрий Иванов</h4>
+                        <p class="company">DevGuru</p>
+                        <p>Tech Lead. Специалист по enterprise-разработке.</p>
+                        <ul>
+                            <li>Java EE</li>
+                            <li>Microservices</li>
+                            <li>Cloud (AWS)</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Ольга Козлова</h4>
+                        <p class="company">WebArt</p>
+                        <p>Frontend Architect. Эксперт по современному JS.</p>
+                        <ul>
+                            <li>React/Next.js</li>
+                            <li>TypeScript</li>
+                            <li>UI/UX</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Игорь Новиков</h4>
+                        <p class="company">RoboTech</p>
+                        <p>Lead Robotics Engineer.</p>
+                        <ul>
+                            <li>ROS (Robot Operating System)</li>
+                            <li>Компьютерное зрение</li>
+                            <li>Автономные системы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section (Additional Table) -->
+    <section id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>Пример учебного плана (Информатика)</h2>
+                <p>Семестровое расписание ключевых дисциплин.</p>
+            </div>
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="timeline-content">
+                        <h4>Алгоритмы и структуры данных</h4>
+                        <p>Изучение основных алгоритмов сортировки, поиска, графовых алгоритмов и их сложности.</p>
+                        <div class="timeline-meta">
+                            <span><strong>Начало:</strong> 1 семестр</span>
+                            <span><strong>Конец:</strong> 2 семестр</span>
+                            <span><strong>Длится:</strong> 2 семестра</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="timeline-content">
+                        <h4>Базы данных</h4>
+                        <p>Проектирование реляционных баз данных, SQL, транзакции, оптимизация запросов.</p>
+                        <div class="timeline-meta">
+                            <span><strong>Начало:</strong> 3 семестр</span>
+                            <span><strong>Конец:</strong> 4 семестр</span>
+                            <span><strong>Длится:</strong> 2 семестра</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="timeline-content">
+                        <h4>Операционные системы</h4>
+                        <p>Архитектура ОС, процессы, потоки, память, файловые системы, виртуализация.</p>
+                        <div class="timeline-meta">
+                            <span><strong>Начало:</strong> 4 семестр</span>
+                            <span><strong>Конец:</strong> 5 семестр</span>
+                            <span><strong>Длится:</strong> 2 семестра</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="timeline-content">
+                        <h4>Компьютерные сети</h4>
+                        <p>Модель OSI, TCP/IP, маршрутизация, беспроводные сети, безопасность сетей.</p>
+                        <div class="timeline-meta">
+                            <span><strong>Начало:</strong> 5 семестр</span>
+                            <span><strong>Конец:</strong> 6 семестр</span>
+                            <span><strong>Длится:</strong> 2 семестра</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="timeline-content">
+                        <h4>Дипломное проектирование</h4>
+                        <p>Подготовка и защита выпускной квалификационной работы под руководством ментора из индустрии.</p>
+                        <div class="timeline-meta">
+                            <span><strong>Начало:</strong> 7 семестр</span>
+                            <span><strong>Конец:</strong> 8 семестр</span>
+                            <span><strong>Длится:</strong> 2 семестра</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>ТехноУнивер</h4>
+                    <p>Ведущий IT-университет, готовящий специалистов мирового уровня с 2005 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Техническая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> admission@technouniver.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Быстрые ссылки</h4>
+                    <a href="#directions">Направления</a>
+                    <a href="#disciplines">Дисциплины</a>
+                    <a href="#teachers">Преподаватели</a>
+                    <a href="#schedule">Расписание</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 ТехноУнивер. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

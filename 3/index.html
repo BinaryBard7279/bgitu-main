@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноУнивер - Будущее начинается здесь</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Кнопка переключения темы -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">ТехноУнивер</a>
+                <ul class="nav-menu">
+                    <li><a href="#about">Об университете</a></li>
+                    <li><a href="#directions">Направления</a></li>
+                    <li><a href="#disciplines">Дисциплины</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Открыть меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Будущее начинается здесь</h1>
+                    <p class="hero-subtitle">ТехноУнивер - ведущий IT-университет страны. Обучаем специалистов в области кибербезопасности, искусственного интеллекта и разработки программного обеспечения.</p>
+                    <a href="#directions" class="btn btn-primary">Выбрать направление</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Об университете -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">Об университете</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>ТехноУнивер — современный образовательный центр, готовящий IT-специалистов мирового уровня. Мы объединяем передовые образовательные технологии и практический опыт ведущих компаний отрасли.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <h3>95%</h3>
+                                <p>выпускников трудоустраиваются в первый год</p>
+                            </div>
+                            <div class="stat">
+                                <h3>50+</h3>
+                                <p>партнеров из IT-индустрии</p>
+                            </div>
+                            <div class="stat">
+                                <h3>15 лет</h3>
+                                <p>успешной работы на рынке образования</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Направления обучения (Блок 1: предмет, квалификация, срок, направление) -->
+        <section id="directions" class="section directions">
+            <div class="container">
+                <h2 class="section-title">Направления обучения</h2>
+                <p class="section-subtitle">Выберите программу, соответствующую вашим интересам и карьерным целям</p>
+                
+                <div class="directions-slider">
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn" aria-label="Предыдущий слайд">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                        <button class="slider-btn next-btn" aria-label="Следующий слайд">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            <!-- Слайд 1 -->
+                            <div class="direction-card">
+                                <div class="direction-header">
+                                    <h3>Кибербезопасность</h3>
+                                    <span class="direction-tag">IT</span>
+                                </div>
+                                <div class="direction-content">
+                                    <div class="direction-info">
+                                        <div class="info-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div>
+                                                <h4>Квалификация</h4>
+                                                <p>Бакалавр</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h4>Срок обучения</h4>
+                                                <p>4 года</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-code"></i>
+                                            <div>
+                                                <h4>Направление</h4>
+                                                <p>Информатика и вычислительная техника (ИВТ)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="direction-description">Программа готовит специалистов по защите информационных систем от кибератак и обеспечению безопасности данных.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 2 -->
+                            <div class="direction-card">
+                                <div class="direction-header">
+                                    <h3>Искусственный интеллект</h3>
+                                    <span class="direction-tag">AI</span>
+                                </div>
+                                <div class="direction-content">
+                                    <div class="direction-info">
+                                        <div class="info-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div>
+                                                <h4>Квалификация</h4>
+                                                <p>Бакалавр</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h4>Срок обучения</h4>
+                                                <p>4 года</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-code"></i>
+                                            <div>
+                                                <h4>Направление</h4>
+                                                <p>Информатика и вычислительная техника (ИВТ)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="direction-description">Изучение технологий машинного обучения, нейронных сетей и анализа больших данных для создания интеллектуальных систем.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 3 -->
+                            <div class="direction-card">
+                                <div class="direction-header">
+                                    <h3>Разработка ПО</h3>
+                                    <span class="direction-tag">DEV</span>
+                                </div>
+                                <div class="direction-content">
+                                    <div class="direction-info">
+                                        <div class="info-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div>
+                                                <h4>Квалификация</h4>
+                                                <p>Бакалавр</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h4>Срок обучения</h4>
+                                                <p>4 года</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-code"></i>
+                                            <div>
+                                                <h4>Направление</h4>
+                                                <p>Информатика и вычислительная техника (ИВТ)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="direction-description">Обучение современным технологиям разработки программного обеспечения для различных платформ и устройств.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 4 -->
+                            <div class="direction-card">
+                                <div class="direction-header">
+                                    <h3>Анализ данных</h3>
+                                    <span class="direction-tag">DATA</span>
+                                </div>
+                                <div class="direction-content">
+                                    <div class="direction-info">
+                                        <div class="info-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div>
+                                                <h4>Квалификация</h4>
+                                                <p>Бакалавр</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h4>Срок обучения</h4>
+                                                <p>4 года</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-code"></i>
+                                            <div>
+                                                <h4>Направление</h4>
+                                                <p>Информатика и вычислительная техника (ИВТ)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="direction-description">Подготовка специалистов по сбору, обработке и анализу больших данных для поддержки бизнес-решений.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 5 -->
+                            <div class="direction-card">
+                                <div class="direction-header">
+                                    <h3>Веб-технологии</h3>
+                                    <span class="direction-tag">WEB</span>
+                                </div>
+                                <div class="direction-content">
+                                    <div class="direction-info">
+                                        <div class="info-item">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <div>
+                                                <h4>Квалификация</h4>
+                                                <p>Бакалавр</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <h4>Срок обучения</h4>
+                                                <p>4 года</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-code"></i>
+                                            <div>
+                                                <h4>Направление</h4>
+                                                <p>Информатика и вычислительная техника (ИВТ)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="direction-description">Обучение современным технологиям разработки веб-приложений, интерфейсов и облачных сервисов.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дисциплины (Блок 2: название, текст) -->
+        <section id="disciplines" class="section disciplines">
+            <div class="container">
+                <h2 class="section-title">Ключевые дисциплины</h2>
+                <p class="section-subtitle">Основные предметы, которые вы будете изучать в нашем университете</p>
+                
+                <div class="disciplines-grid">
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h3>Java</h3>
+                        <p>Разработка приложений в среде Java. Изучение объектно-ориентированного программирования, многопоточности и фреймворков Spring и Hibernate.</p>
+                    </div>
+                    
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Кибербезопасность</h3>
+                        <p>Основы защиты информации, криптография, анализ уязвимостей и методы противодействия кибератакам.</p>
+                    </div>
+                    
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Машинное обучение</h3>
+                        <p>Изучение алгоритмов машинного обучения, нейронных сетей и методов обработки больших данных.</p>
+                    </div>
+                    
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Базы данных</h3>
+                        <p>Проектирование и администрирование реляционных и нереляционных баз данных, язык SQL и оптимизация запросов.</p>
+                    </div>
+                    
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Веб-разработка</h3>
+                        <p>Создание современных веб-приложений с использованием HTML5, CSS3, JavaScript и фреймворков React и Vue.js.</p>
+                    </div>
+                    
+                    <div class="discipline-card">
+                        <div class="discipline-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Сетевые технологии</h3>
+                        <p>Основы построения компьютерных сетей, протоколы TCP/IP, настройка сетевого оборудования и обеспечение сетевой безопасности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Особенности направлений (Блок 3: заголовок, подзаголовок, текст) -->
+        <section class="section features">
+            <div class="container">
+                <h2 class="section-title">Особенности направлений</h2>
+                <p class="section-subtitle">Узнайте, что делает каждое направление уникальным</p>
+                
+                <div class="features-accordion">
+                    <!-- Элемент 1 -->
+                    <div class="accordion-item active">
+                        <button class="accordion-header">
+                            <h3>Кибербезопасность</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h4>Защита цифрового мира</h4>
+                            <p>Программа готовит специалистов, способных выявлять и устранять уязвимости в информационных системах, разрабатывать средства защиты данных и противостоять современным киберугрозам. Студенты получают практический опыт работы с системами обнаружения вторжений, криптографическими методами и средствами защиты сетей.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Элемент 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Искусственный интеллект</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h4>Создание интеллектуальных систем</h4>
+                            <p>Студенты изучают алгоритмы машинного обучения, нейронные сети, компьютерное зрение и обработку естественного языка. Программа включает практические проекты по созданию систем рекомендаций, чат-ботов, систем распознавания изображений и прогнозной аналитики.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Элемент 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Разработка ПО</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h4>Создание качественного программного обеспечения</h4>
+                            <p>Обучение включает полный цикл разработки: от анализа требований и проектирования архитектуры до тестирования и развертывания. Студенты осваивают Agile-методологии, системы контроля версий и практики DevOps для создания надежных и масштабируемых приложений.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Элемент 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Анализ данных</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h4>Превращение данных в знания</h4>
+                            <p>Программа фокусируется на методах сбора, очистки, анализа и визуализации данных. Студенты изучают статистические методы, инструменты бизнес-аналитики и методы машинного обучения для извлечения ценных инсайтов из больших объемов информации.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Элемент 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Веб-технологии</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h4>Создание современного веба</h4>
+                            <p>Обучение включает разработку адаптивных и интерактивных веб-приложений, создание пользовательских интерфейсов и интеграцию с серверными системами. Студенты осваивают как фронтенд, так и бэкенд разработку, а также принципы UX/UI дизайна.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преподаватели (Блок 4: фото, ФИО, компания, дисциплины) -->
+        <section id="teachers" class="section teachers">
+            <div class="container">
+                <h2 class="section-title">Занятия ведут представители IT-индустрии</h2>
+                <p class="section-subtitle">Практикующие специалисты из ведущих компаний</p>
+                
+                <div class="teachers-grid">
+                    <!-- Преподаватель 1 -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <div class="photo-placeholder"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Анна Смирнова</h3>
+                            <p class="teacher-company">Huеsoft</p>
+                            <div class="teacher-disciplines">
+                                <h4>Дисциплины:</h4>
+                                <ul>
+                                    <li>Кибербезопасность</li>
+                                    <li>Защита сетей</li>
+                                    <li>Криптография</li>
+                                    <li>Анализ уязвимостей</li>
+                                    <li>Этичный хакинг</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Преподаватель 2 -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <div class="photo-placeholder"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Иван Петров</h3>
+                            <p class="teacher-company">TechData</p>
+                            <div class="teacher-disciplines">
+                                <h4>Дисциплины:</h4>
+                                <ul>
+                                    <li>Искусственный интеллект</li>
+                                    <li>Машинное обучение</li>
+                                    <li>Анализ данных</li>
+                                    <li>Нейронные сети</li>
+                                    <li>Компьютерное зрение</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Преподаватель 3 -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <div class="photo-placeholder"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Мария Козлова</h3>
+                            <p class="teacher-company">WebSystems</p>
+                            <div class="teacher-disciplines">
+                                <h4>Дисциплины:</h4>
+                                <ul>
+                                    <li>Веб-разработка</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                    <li>UI/UX дизайн</li>
+                                    <li>Адаптивная верстка</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Преподаватель 4 -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <div class="photo-placeholder"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Алексей Волков</h3>
+                            <p class="teacher-company">SoftDev</p>
+                            <div class="teacher-disciplines">
+                                <h4>Дисциплины:</h4>
+                                <ul>
+                                    <li>Разработка ПО</li>
+                                    <li>Java</li>
+                                    <li>Архитектура ПО</li>
+                                    <li>Тестирование</li>
+                                    <li>DevOps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Преподаватель 5 -->
+                    <div class="teacher-card">
+                        <div class="teacher-photo">
+                            <div class="photo-placeholder"></div>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Екатерина Новикова</h3>
+                            <p class="teacher-company">DataPro</p>
+                            <div class="teacher-disciplines">
+                                <h4>Дисциплины:</h4>
+                                <ul>
+                                    <li>Базы данных</li>
+                                    <li>SQL</li>
+                                    <li>Big Data</li>
+                                    <li>Аналитика</li>
+                                    <li>Data Mining</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дополнительная информация (Блок 5: название, начало, конец, сколько длится) -->
+        <section class="section schedule">
+            <div class="container">
+                <h2 class="section-title">Расписание семестров</h2>
+                <p class="section-subtitle">Структура учебного года по направлениям</p>
+                
+                <div class="schedule-cards">
+                    <div class="schedule-card">
+                        <div class="schedule-header">
+                            <h3>Информатика</h3>
+                            <span class="schedule-badge">1 курс</span>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-item">
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>Начало</h4>
+                                    <p>1 сентября</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <h4>Конец</h4>
+                                    <p>31 декабря</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Продолжительность</h4>
+                                    <p>4 месяца</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <div class="schedule-header">
+                            <h3>Программирование</h3>
+                            <span class="schedule-badge">2 курс</span>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-item">
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>Начало</h4>
+                                    <p>10 января</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <h4>Конец</h4>
+                                    <p>20 мая</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Продолжительность</h4>
+                                    <p>4.5 месяца</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <div class="schedule-header">
+                            <h3>Кибербезопасность</h3>
+                            <span class="schedule-badge">3 курс</span>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-item">
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>Начало</h4>
+                                    <p>1 сентября</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <h4>Конец</h4>
+                                    <p>15 января</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Продолжительность</h4>
+                                    <p>4.5 месяца</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <div class="schedule-header">
+                            <h3>Искусственный интеллект</h3>
+                            <span class="schedule-badge">4 курс</span>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-item">
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>Начало</h4>
+                                    <p>15 февраля</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <h4>Конец</h4>
+                                    <p>30 июня</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Продолжительность</h4>
+                                    <p>4.5 месяца</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <div class="schedule-header">
+                            <h3>Веб-технологии</h3>
+                            <span class="schedule-badge">3 курс</span>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-item">
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>Начало</h4>
+                                    <p>10 марта</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <h4>Конец</h4>
+                                    <p>20 июля</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Продолжительность</h4>
+                                    <p>4.5 месяца</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты и CTA -->
+        <section id="contacts" class="section cta">
+            <div class="container">
+                <h2 class="section-title">Готовы стать частью нашего университета?</h2>
+                <p class="section-subtitle">Оставьте заявку на консультацию по поступлению</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Выберите направление</option>
+                            <option value="cybersecurity">Кибербезопасность</option>
+                            <option value="ai">Искусственный интеллект</option>
+                            <option value="software">Разработка ПО</option>
+                            <option value="data">Анализ данных</option>
+                            <option value="web">Веб-технологии</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ТехноУнивер</h3>
+                    <p>Будущее начинается здесь</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Технологическая, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@technouniver.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ТехноУнивер. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

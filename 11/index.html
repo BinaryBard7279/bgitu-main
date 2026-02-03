@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>БГИТУ IT Institute — Лучшая IT подготовка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лучшая IT подготовка в Брянской области. Бакалавриат 4 года, карьерный трек и последующее трудоустройство.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header" id="top">
+  <div class="container header__inner">
+    <div class="logo">
+      <span class="logo__square">IT</span>
+      <span class="logo__text">БГИТУ</span>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav__link">Главная</a>
+      <a href="#directions" class="nav__link">Направления</a>
+      <a href="#disciplines" class="nav__link">Дисциплины</a>
+      <a href="#features" class="nav__link">Фичи</a>
+      <a href="#roadmap" class="nav__link">Карьерный трек</a>
+      <a href="#curriculum" class="nav__link">Учебный план</a>
+      <a href="#faculty" class="nav__link">Преподаватели</a>
+      <a href="#apply" class="nav__link nav__link--accent">Поступить</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title">ЛУЧШАЯ IT ПОДГОТОВКА В БРЯНСКОЙ ОБЛАСТИ</h1>
+        <p class="hero__subtitle">Поступай на IT в БГИТУ — образовательный и карьерный трек с последующим трудоустройством</p>
+        <div class="hero__actions">
+          <a href="#apply" class="btn btn--primary btn--lg">Подать заявление online</a>
+          <a href="#directions" class="btn btn--ghost btn--lg">Посмотреть направления</a>
+        </div>
+        <div class="hero__partner">
+          <span class="hero__partner-label">Партнёр:</span>
+          <div class="placeholder placeholder--square placeholder--blue">
+            Colored Square Placeholder [Blue]
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="placeholder placeholder--hero">
+          Colored Square Placeholder [Light Gray] — абстрактная инфографика трека обучения
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: HERO & DIRECTIONS (карточки треков) -->
+  <section class="section" id="directions">
+    <div class="container">
+      <h2 class="section__title">Направления подготовки</h2>
+      <p class="section__subtitle">5 современных IT‑треков, каждый — это понятный маршрут от 1 курса до трудоустройства.</p>
+
+      <div class="cards cards--directions">
+        <!-- Cybersecurity -->
+        <article class="card card--direction">
+          <h3 class="card__title">Кибербезопасность программных комплексов</h3>
+          <p class="card__meta">09.03.01</p>
+          <p class="card__line">
+            (предмет (Кибербезопасность программных комплексов), квалификация (Бакалавр), срок (4 года), направление (ИВТ))
+          </p>
+          <p class="card__text">
+            Защита инфраструктуры, анализ уязвимостей, пентестинг, криптография, практическая работа с инструментами информационной безопасности.
+          </p>
+          <button class="btn btn--ghost btn--sm">Подробнее о треке</button>
+        </article>
+
+        <!-- AI -->
+        <article class="card card--direction">
+          <h3 class="card__title">Искусственный интеллект</h3>
+          <p class="card__meta">09.03.01</p>
+          <p class="card__line">
+            (предмет (Искусственный интеллект), квалификация (Бакалавр), срок (4 года), направление (ИВТ))
+          </p>
+          <p class="card__text">
+            Машинное обучение, нейросети, Big Data, компьютерное зрение, обработка естественного языка, работа с Python, TensorFlow, PyTorch.
+          </p>
+          <button class="btn btn--ghost btn--sm">Подробнее о треке</button>
+        </article>
+
+        <!-- CAD/Robotics -->
+        <article class="card card--direction">
+          <h3 class="card__title">Автоматизированное проектирование робототехнических систем</h3>
+          <p class="card__meta">09.03.01</p>
+          <p class="card__line">
+            (предмет (Автоматизированное проектирование робототехнических систем), квалификация (Бакалавр), срок (4 года), направление (ИВТ))
+          </p>
+          <p class="card__text">
+            Проектирование и моделирование робототехнических систем, встроенное ПО, управление, сенсоры, интеграция с реальными производственными задачами.
+          </p>
+          <button class="btn btn--ghost btn--sm">Подробнее о треке</button>
+        </article>
+
+        <!-- IST -->
+        <article class="card card--direction">
+          <h3 class="card__title">Информационные системы и технологии</h3>
+          <p class="card__meta">09.03.02</p>
+          <p class="card__line">
+            (предмет (Информационные системы и технологии), квалификация (Бакалавр), срок (4 года), направление (ИВТ))
+          </p>
+          <p class="card__text">
+            Проектирование и разработка корпоративных ИС, базы данных, системный анализ, администрирование инфраструктуры, интеграция сервисов.
+          </p>
+          <button class="btn btn--ghost btn--sm">Подробнее о треке</button>
+        </article>
+
+        <!-- SE -->
+        <article class="card card--direction">
+          <h3 class="card__title">Программная инженерия</h3>
+          <p class="card__meta">09.03.04</p>
+          <p class="card__line">
+            (предмет (Программная инженерия), квалификация (Бакалавр), срок (4 года), направление (ПИ))
+          </p>
+          <p class="card__text">
+            Полный цикл разработки ПО: требования, архитектура, командная разработка, тестирование, DevOps‑практики и эксплуатация.
+          </p>
+          <button class="btn btn--ghost btn--sm">Подробнее о треке</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: DISCIPLINE BLOCKS -->
+  <section class="section" id="disciplines">
+    <div class="container">
+      <h2 class="section__title">Ключевые блоки дисциплин</h2>
+      <p class="section__subtitle">Фокус на стеке, который реально используется в современных IT‑компаниях.</p>
+
+      <div class="cards cards--disciplines">
+        <article class="card card--discipline">
+          <h3 class="card__title">Java</h3>
+          <p class="card__line">
+            (блок дисциплин (название (Java), текст (Разработка серверных приложений, ООП, среды разработки)))
+          </p>
+          <p class="card__text">
+            Ядро backend‑подготовки: ООП, коллекции, многопоточность, работа с базами, фреймворки уровня Spring и экосистема Java.
+          </p>
+        </article>
+
+        <article class="card card--discipline">
+          <h3 class="card__title">Python</h3>
+          <p class="card__line">
+            (блок дисциплин (название (Python), текст (Машинное обучение, нейросети, прикладная разработка)))
+          </p>
+          <p class="card__text">
+            Аналитика данных, ML/AI, написание прикладных сервисов, работа с библиотеками NumPy, Pandas, TensorFlow, scikit‑learn.
+          </p>
+        </article>
+
+        <article class="card card--discipline">
+          <h3 class="card__title">1С</h3>
+          <p class="card__line">
+            (блок дисциплин (название (1С), текст (Разработка бизнес-приложений, адаптация конфигураций)))
+          </p>
+          <p class="card__text">
+            Автоматизация учёта и бизнес‑процессов, разработка и адаптация конфигураций 1С:Предприятие, интеграция с другими системами.
+          </p>
+        </article>
+      </div>
+
+      <div class="disciplines__stack">
+        <h3 class="disciplines__stack-title">Технологический стек (обзор)</h3>
+        <ul class="stack-list">
+          <li>Языки: Java, C++, Python, PHP, JavaScript (HTML/CSS)</li>
+          <li>Направления: Frontend, Backend, Mobile, 1C, ML/AI, System Admin, QA, Analytics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: FEATURES OF DIRECTIONS -->
+  <section class="section section--muted" id="features">
+    <div class="container">
+      <h2 class="section__title">Фичи направлений</h2>
+      <p class="section__subtitle">Программа построена как понятный трек развития: от основ до реальных задач индустрии.</p>
+
+      <div class="cards cards--features">
+        <article class="card card--feature">
+          <h3 class="card__title">Кибербезопасность</h3>
+          <p class="card__line">
+            (фичи направлений (заголовок (Кибербезопасность), (подзаголовок (Защита инфраструктуры)), текст (Изучение методов защиты программных комплексов и сетей)))
+          </p>
+          <p class="card__text">
+            Расширенный блок по анализу уязвимостей, пентестингу, криптографии и защите приложений. Практика на стендах и соревновательных платформах.
+          </p>
+        </article>
+
+        <article class="card card--feature">
+          <h3 class="card__title">Проектная работа</h3>
+          <p class="card__line">
+            (фичи направлений (заголовок (Проектная работа), (подзаголовок (С 1 курса)), текст (Совместная работа над реальными IT-проектами)))
+          </p>
+          <p class="card__text">
+            С первого курса студенты работают над учебно‑проектными задачами: от пет‑проектов до совместных кейсов с компаниями‑партнёрами по Agile‑подходам.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FACULTY & INDUSTRY PARTNERS -->
+  <section class="section" id="faculty">
+    <div class="container">
+      <h2 class="section__title">Преподаватели и IT‑индустрия</h2>
+      <p class="section__subtitle">Дисциплины читают практикующие разработчики и архитекторы из компаний.</p>
+
+      <div class="cards cards--faculty">
+        <article class="card card--faculty">
+          <div class="placeholder placeholder--avatar placeholder--blue">
+            Colored Square Placeholder [Color: Blue]
+          </div>
+          <h3 class="card__title">Иванов И.И.</h3>
+          <p class="card__meta">(Занятия ведут представители IT-индустрии (фото [Color: Blue]), (фио (Иванов И.И.)), (компания (TechSoft)), дисциплины (список (Java, Backend архитектура))))</p>
+          <p class="card__text">
+            Директор TechSoft, 10+ лет в enterprise‑разработке. Ведёт курсы по Java, backend‑архитектуре и проектированию высоконагруженных систем.
+          </p>
+        </article>
+
+        <article class="card card--faculty">
+          <div class="placeholder placeholder--avatar placeholder--green">
+            Colored Square Placeholder [Color: Green]
+          </div>
+          <h3 class="card__title">Петрова А.С.</h3>
+          <p class="card__meta">(Занятия ведут представители IT-индустрии (фото [Color: Green]), (фио (Петрова А.С.)), (компания (DataCorp)), дисциплины (список (Аналитика данных, Python))))</p>
+          <p class="card__text">
+            Lead Data Scientist в DataCorp. Преподаёт аналитику данных, Python для ML и прикладные курсы по построению моделей.
+          </p>
+        </article>
+      </div>
+
+      <div class="partners-row">
+        <div class="placeholder placeholder--wide">
+          Colored Square Placeholder [Light Blue] — Лента логотипов партнёров (Yandex, VK, Сбер, 1С и др.)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: DETAILED TIMELINE (ROADMAP) -->
+  <section class="section section--muted" id="roadmap">
+    <div class="container">
+      <h2 class="section__title">Карьерный трек: 4 года — 4 шага</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <h3>Шаг 1. Базовое образование</h3>
+            <p>Планы разработаны совместно с IT‑компаниями. Фундамент: информатика, программирование, математика, базы данных.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <h3>Шаг 2. Практика и стажировка</h3>
+            <p>С 3‑го курса — оплачиваемая практика (от 20 тыс. руб.) в компаниях‑партнёрах, работа над реальными задачами.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <h3>Шаг 3. Целевой диплом</h3>
+            <p>Дипломные проекты решают реальные проблемы предприятий: автоматизация, аналитика, новые сервисы.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <h3>Шаг 4. Работа в IT</h3>
+            <p>После 4 лет — выход на позиции Junior/Middle с вилкой до 150 тыс. руб. и реальным портфолио проектов.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SECTION 5 (конкретные дисциплины по семестрам) -->
+  <section class="section" id="curriculum">
+    <div class="container">
+      <h2 class="section__title">Детальный учебный план (по семестрам)</h2>
+      <p class="section__subtitle">Каждая дисциплина встроена в понятную хронологию 8 семестров.</p>
+
+      <div class="curriculum__chips">
+        <span class="chip">(название (Информатика)), начало (1), конец (2), сколько длится (2 семестра)</span>
+        <span class="chip">(название (Frontend-разработка)), начало (3), конец (4), сколько длится (2 семестра)</span>
+        <span class="chip">(название (Машинное обучение и ИИ)), начало (5), конец (7), сколько длится (3 семестра)</span>
+        <span class="chip">(название (Мобильная разработка)), начало (6), конец (7), сколько длится (2 семестра)</span>
+      </div>
+
+      <div class="curriculum__controls">
+        <label for="trackSelect">Выберите трек:</label>
+        <select id="trackSelect" class="select">
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="mobile">Mobile</option>
+          <option value="ai">AI / Data</option>
+          <option value="devops">DevOps</option>
+          <option value="onec">1C</option>
+        </select>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="table" id="curriculumTable">
+          <thead>
+          <tr>
+            <th>Дисциплина</th>
+            <th>1–2 сем.</th>
+            <th>3–4 сем.</th>
+            <th>5–6 сем.</th>
+            <th>7–8 сем.</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- наполняется JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE SOCIAL PROOF: GRID вместо слайдера -->
+  <section class="section" id="success">
+    <div class="container">
+      <h2 class="section__title">Реальные достижения студентов</h2>
+      <div class="cards cards--success">
+        <article class="card card--success">
+          <h3 class="card__title">II место в Первенстве России</h3>
+          <p class="card__text">Команда БГИТУ по спортивному программированию — призёры всероссийских соревнований.</p>
+        </article>
+        <article class="card card--success">
+          <h3 class="card__title">III место в Чемпионате России</h3>
+          <p class="card__text">Команда по кибербезопасности — призёры национального чемпионата по ИБ.</p>
+        </article>
+        <article class="card card--success">
+          <h3 class="card__title">Победители «Код Мира»</h3>
+          <p class="card__text">Студенты трека ИИ выигрывают в номинациях ML и компьютерное зрение.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / APPLY -->
+  <section class="section section--muted" id="apply">
+    <div class="container apply__grid">
+      <div>
+        <h2 class="section__title">Абитуриенту</h2>
+        <div class="faq" id="faq">
+          <div class="faq__item">
+            <button class="faq__question">
+              Что делать выпускнику 11 класса?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>ЕГЭ: русский, математика (профиль), физика или информатика. Подача документов на priem.bgitu.ru, участие в конкурсе, отслеживание рейтинга.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Что делать выпускнику колледжа (СПО)?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Поступление по внутренним испытаниям по профилю, возможно сокращённое обучение, консультации в приёмной комиссии.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Какие стипендии доступны?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Академическая (2.4к–6к), социальная, повышенные выплаты за успехи в учёбе и конкурсах, аспирантская.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="section__subtitle">Быстрый запрос консультации</h3>
+        <form class="form" id="leadForm">
+          <label class="form__field">
+            <span>Ваше имя</span>
+            <input type="text" name="name" required>
+          </label>
+          <label class="form__field">
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label class="form__field">
+            <span>Интересующее направление</span>
+            <select name="direction">
+              <option value="cyber">Кибербезопасность</option>
+              <option value="ai">Искусственный интеллект</option>
+              <option value="cad">Робототехнические системы</option>
+              <option value="ist">Информационные системы</option>
+              <option value="se">Программная инженерия</option>
+            </select>
+          </label>
+          <label class="form__checkbox">
+            <input type="checkbox" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <button class="btn btn--primary btn--block" type="submit">Получить консультацию</button>
+          <p class="form__hint">Полная подача заявления — на <a href="https://priem.bgitu.ru" target="_blank" rel="noreferrer">priem.bgitu.ru</a>.</p>
+          <p class="form__success" id="leadSuccess" hidden>Спасибо! Мы сохранили ваши данные локально — менеджер свяжется с вами после подачи на официальном сайте.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="container footer__grid">
+    <div>
+      <h3 class="footer__title">Контакты</h3>
+      <p>пр‑т Станке Димитрова, 3, Брянск</p>
+      <p>Тел.: <a href="tel:+74832518808">+7 (4832) 51‑88‑08</a></p>
+      <p>Email: <a href="mailto:it@bgitu.ru">it@bgitu.ru</a></p>
+    </div>
+    <div>
+      <h3 class="footer__title">Абитуриенту</h3>
+      <p><a href="https://priem.bgitu.ru" target="_blank" rel="noreferrer">Онлайн‑приёмная priem.bgitu.ru</a></p>
+      <p><a href="https://vk.com/it_bgitu" target="_blank" rel="noreferrer">Сообщество VK</a></p>
+    </div>
+    <div>
+      <h3 class="footer__title">График</h3>
+      <p>Пн–Пт: 09:00–17:00<br>Сб: 09:00–13:00</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2026 БГИТУ, кафедра ИТ</span>
+      <span>Дизайн: минималистичный EdTech</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
