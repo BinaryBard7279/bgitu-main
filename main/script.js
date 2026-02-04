@@ -1,6 +1,8 @@
 /* БГИТУ IT-Институт - Interactive Features */
+
 // ============================================
-// Course Data for Roadmap
+// ДАННЫЕ: КУРСЫ (Для дорожной карты)
+// Массив объектов с информацией о каждом блоке учебного плана.
 // ============================================
 const courses = [
   {
@@ -63,7 +65,8 @@ const courses = [
 const semesters = [1, 2, 3, 4, 5, 6, 7, 8];
 
 // ============================================
-// Directions (Carousel) Data
+// ДАННЫЕ: НАПРАВЛЕНИЯ (Для первого слайдера)
+// Информация для карточек направлений подготовки.
 // ============================================
 const directions = [
   {
@@ -108,7 +111,48 @@ const directions = [
   },
 ];
 
-// Icons for direction cards (SVG strings)
+// ============================================
+// ДАННЫЕ: ПРЕПОДАВАТЕЛИ (Для второго слайдера-ленты)
+// ============================================
+const faculty = [
+  {
+    name: 'Анна Смирнова',
+    company: 'Huesoft',
+    disciplines: ['Кибербезопасность', 'Защита сетей', 'Криптография', 'Анализ уязвимостей', 'Этичный хакинг'],
+  },
+  {
+    name: 'Протасов Павел Николаевич',
+    company: 'Директор ООО «СОФТСОЛ»',
+    disciplines: ['Разработка приложений в среде Java', 'Язык программирования Java', 'Объектно-ориентированное программирование'],
+  },
+  {
+    name: 'Кондратенко Сергей Викторович',
+    company: 'Директор ООО «НООСОФТ»',
+    disciplines: ['JavaScript-разработка'],
+  },
+  {
+    name: 'Иванов И.И.',
+    company: 'TechSoft',
+    disciplines: ['Java', 'Backend архитектура'],
+  },
+  {
+    name: 'Петрова А.С.',
+    company: 'DataCorp',
+    disciplines: ['Аналитика данных', 'Python'],
+  },
+  {
+    name: 'Сидоров В.К.',
+    company: 'SoftSol',
+    disciplines: ['1С-разработка', 'Бизнес-аналитика'],
+  },
+  {
+    name: 'Козлова М.А.',
+    company: 'ГК Иннотех',
+    disciplines: ['Frontend', 'JavaScript'],
+  },
+];
+
+// SVG иконки для карточек направлений (храним как строки)
 const DIRECTION_ICONS = {
   qualification: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>',
   period: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
@@ -116,19 +160,27 @@ const DIRECTION_ICONS = {
 };
 
 // ============================================
-// DOM Ready
+// ЗАПУСК (DOM Ready)
+// Этот код срабатывает, когда HTML полностью загружен браузером.
+// Здесь мы инициализируем все функции.
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
-  initNavigation();
-  initScrollReveal();
-  initDirectionsCarousel();
-  initRoadmap();
-  initStaggerAnimations();
-  setCurrentYear();
+  initAchievements(); // Загружаем достижения
+  initHeader();       // Запускаем эффект шапки
+  initNavigation();   // Включаем навигацию
+  initScrollReveal(); // Включаем анимацию при скролле
+  initDirectionsCarousel(); // Собираем слайдер направлений
+  initFacultyTape();  // Собираем ленту преподавателей
+  initRoadmap();      // Строим дорожную карту
+  initStaggerAnimations(); // Настраиваем задержки анимаций
+  setCurrentYear();   // Ставим текущий год в футере
+  initFAQ();          // Включаем аккордеон вопросов
+  initApplyForm();    // Включаем обработку формы
 });
+
 // ============================================
-// Header Scroll Effect
+// ЭФФЕКТ ШАПКИ (Header Scroll Effect)
+// Добавляет тень и фон к шапке, когда пользователь прокручивает страницу вниз.
 // ============================================
 function initHeader() {
   const header = document.getElementById('header');
@@ -144,14 +196,17 @@ function initHeader() {
   window.addEventListener('scroll', updateHeader);
   updateHeader();
 }
+
 // ============================================
-// Navigation
+// НАВИГАЦИЯ
+// Обрабатывает клики по меню и плавный скролл к секциям.
+// Также подсвечивает активный пункт меню.
 // ============================================
 function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = ['directions', 'disciplines', 'features', 'faculty', 'roadmap'];
   
-  // Smooth scroll on click
+  // Плавный скролл при клике
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       const targetId = link.dataset.target;
@@ -162,7 +217,7 @@ function initNavigation() {
     });
   });
   
-  // Footer links smooth scroll
+  // Ссылки в футере
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
@@ -176,7 +231,7 @@ function initNavigation() {
     });
   });
   
-  // Active section tracking
+  // Подсветка активной секции при скролле
   const updateActiveSection = () => {
     let activeSection = '';
     
@@ -200,20 +255,23 @@ function initNavigation() {
   window.addEventListener('scroll', updateActiveSection);
   updateActiveSection();
 }
+
 // ============================================
-// Scroll Reveal (IntersectionObserver)
+// SCROLL REVEAL (Появление при скролле)
+// Использует IntersectionObserver, чтобы отслеживать, когда элементы появляются на экране,
+// и добавляет им класс .visible для запуска CSS анимации.
 // ============================================
 function initScrollReveal() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1, // Срабатывать, когда видно 10% элемента
+    rootMargin: '0px 0px -50px 0px' // Отступ снизу
   };
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Перестаем следить после первого появления
       }
     });
   }, observerOptions);
@@ -222,8 +280,10 @@ function initScrollReveal() {
     observer.observe(el);
   });
 }
+
 // ============================================
-// Directions Carousel
+// КАРУСЕЛЬ НАПРАВЛЕНИЙ
+// Логика переключения слайдов, точек навигации и генерации HTML для слайдов.
 // ============================================
 function buildDirectionSlide(data) {
   const slide = document.createElement('div');
@@ -263,6 +323,7 @@ function buildDirectionSlide(data) {
   return slide;
 }
 
+// Вспомогательная функция для безопасности (защита от XSS)
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
@@ -277,7 +338,7 @@ function initDirectionsCarousel() {
 
   if (!track || !dotsContainer) return;
 
-  // Build slides from data
+  // Создаем слайды из данных
   directions.forEach((data) => {
     track.appendChild(buildDirectionSlide(data));
   });
@@ -287,7 +348,7 @@ function initDirectionsCarousel() {
   let currentIndex = 0;
 
   function goToSlide(index) {
-    currentIndex = (index + total) % total;
+    currentIndex = (index + total) % total; // Зацикливание
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === currentIndex);
     });
@@ -297,7 +358,7 @@ function initDirectionsCarousel() {
     });
   }
 
-  // Build dots
+  // Создаем точки навигации
   for (let i = 0; i < total; i++) {
     const dot = document.createElement('button');
     dot.type = 'button';
@@ -315,11 +376,164 @@ function initDirectionsCarousel() {
 }
 
 // ============================================
-// Staggered Animations
+// ЛЕНТА ПРЕПОДАВАТЕЛЕЙ (Слайдер с перетаскиванием)
+// Реализует логику "перетащи и брось" (drag-and-drop) и инерцию после отпускания мыши.
+// ============================================
+function buildFacultyCard(data) {
+  const card = document.createElement('div');
+  card.className = 'faculty-card';
+  const disciplinesList = data.disciplines.map((d) => `<li>${escapeHtml(d)}</li>`).join('');
+  card.innerHTML = `
+    <div class="faculty-photo-placeholder"></div>
+    <div class="faculty-info">
+      <h3 class="faculty-name">${escapeHtml(data.name)}</h3>
+      <p class="faculty-company">${escapeHtml(data.company)}</p>
+      <p class="faculty-disciplines-title">Дисциплины:</p>
+      <ul class="faculty-disciplines">${disciplinesList}</ul>
+    </div>
+  `;
+  return card;
+}
+
+function initFacultyTape() {
+  const track = document.getElementById('facultyTrack');
+  const prevBtn = document.getElementById('facultyPrev');
+  const nextBtn = document.getElementById('facultyNext');
+
+  if (!track) return;
+
+  const inner = document.createElement('div');
+  inner.className = 'faculty-track-inner';
+  faculty.forEach((person) => {
+    inner.appendChild(buildFacultyCard(person));
+  });
+  track.appendChild(inner);
+
+  const CARD_GAP = 24;
+  let currentOffset = 0;
+  let maxOffset = 0;
+
+  function getCardWidth() {
+    const first = inner.querySelector('.faculty-card');
+    return first ? first.offsetWidth + CARD_GAP : 384 + CARD_GAP;
+  }
+
+  function updateMaxOffset() {
+    maxOffset = Math.max(0, inner.offsetWidth - track.clientWidth);
+  }
+
+  function applyOffset() {
+    inner.style.transform = `translateX(-${currentOffset}px)`;
+  }
+
+  function scrollBy(delta) {
+    currentOffset = Math.max(0, Math.min(maxOffset, currentOffset + delta));
+    applyOffset();
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => scrollBy(-getCardWidth()));
+  if (nextBtn) nextBtn.addEventListener('click', () => scrollBy(getCardWidth()));
+
+  updateMaxOffset();
+  applyOffset();
+  window.addEventListener('resize', () => {
+    updateMaxOffset();
+    currentOffset = Math.min(currentOffset, maxOffset);
+    applyOffset();
+  });
+
+  // --- ИНЕРЦИЯ ЛЕНТЫ (настройка физики) ---
+  const INERTIA_FRICTION = 0.92; // Трение (чем ближе к 1, тем дольше скользит)
+  const INERTIA_STRENGTH = 1.2;  // Сила броска
+
+  let isDown = false;
+  let startX;
+  let startOffset;
+  let lastOffset = 0;
+  let lastTime = 0;
+  let inertiaId = null;
+
+  function stopInertia() {
+    if (inertiaId != null) {
+      cancelAnimationFrame(inertiaId);
+      inertiaId = null;
+    }
+    track.classList.remove('faculty-inertia');
+  }
+
+  function runInertia(velocityPxPerMs) {
+    stopInertia();
+    let v = velocityPxPerMs * INERTIA_STRENGTH;
+    track.classList.add('faculty-inertia');
+
+    function step() {
+      currentOffset = Math.max(0, Math.min(maxOffset, currentOffset + v));
+      applyOffset();
+      v *= INERTIA_FRICTION;
+      if (Math.abs(v) > 0.15) {
+        inertiaId = requestAnimationFrame(step);
+      } else {
+        inertiaId = null;
+        track.classList.remove('faculty-inertia');
+      }
+    }
+    inertiaId = requestAnimationFrame(step);
+  }
+
+  // События мыши для перетаскивания
+  track.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    stopInertia();
+    isDown = true;
+    startX = e.pageX;
+    startOffset = currentOffset;
+    lastOffset = currentOffset;
+    lastTime = performance.now();
+    track.classList.add('faculty-dragging');
+    track.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mouseleave', () => {
+    if (!isDown) return;
+    const now = performance.now();
+    const dt = now - lastTime;
+    const velocity = dt > 0 ? (currentOffset - lastOffset) / dt : 0;
+    isDown = false;
+    track.classList.remove('faculty-dragging');
+    track.style.cursor = 'grab';
+    runInertia(velocity);
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    const now = performance.now();
+    const dt = now - lastTime;
+    const velocity = dt > 0 ? (currentOffset - lastOffset) / dt : 0;
+    isDown = false;
+    track.classList.remove('faculty-dragging');
+    track.style.cursor = 'grab';
+    runInertia(velocity);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const drag = e.pageX - startX;
+    lastOffset = currentOffset;
+    lastTime = performance.now();
+    currentOffset = Math.max(0, Math.min(maxOffset, startOffset - drag));
+    applyOffset();
+    e.preventDefault();
+  });
+}
+
+// ============================================
+// КАСКАДНАЯ АНИМАЦИЯ (Stagger)
+// Добавляет задержку animation-delay для элементов внутри сетки,
+// чтобы они появлялись по очереди, а не все сразу.
 // ============================================
 function initStaggerAnimations() {
-  // Group elements by their parent section
-  const sections = document.querySelectorAll('.disciplines-grid, .features-grid, .faculty-grid');
+  const sections = document.querySelectorAll('.disciplines-grid, .features-grid');
   
   sections.forEach(section => {
     const items = section.querySelectorAll('[data-stagger]');
@@ -328,8 +542,10 @@ function initStaggerAnimations() {
     });
   });
 }
+
 // ============================================
-// Roadmap Grid
+// ДОРОЖНАЯ КАРТА (Roadmap Grid)
+// Генерирует сетку курсов и управляет всплывающей подсказкой.
 // ============================================
 function initRoadmap() {
   const grid = document.getElementById('roadmap-grid');
@@ -337,7 +553,7 @@ function initRoadmap() {
   
   if (!grid || !tooltip) return;
   
-  // Build the grid
+  // Построение сетки
   courses.forEach((course, courseIndex) => {
     const row = document.createElement('div');
     row.className = 'roadmap-row';
@@ -373,7 +589,7 @@ function initRoadmap() {
     grid.appendChild(row);
   });
   
-  // Tooltip handlers
+  // Обработчики для Tooltip (подсказки)
   grid.addEventListener('mouseenter', (e) => {
     const cell = e.target.closest('.roadmap-cell.active');
     if (cell && cell.dataset.courseIndex !== undefined) {
@@ -389,6 +605,7 @@ function initRoadmap() {
     }
   }, true);
 }
+
 function showTooltip(course, tooltip) {
   const colorClass = course.color.replace('bg-', '');
   const colorMap = {
@@ -414,12 +631,145 @@ function showTooltip(course, tooltip) {
 function hideTooltip(tooltip) {
   tooltip.style.display = 'none';
 }
+
 // ============================================
-// Current Year
+// ТЕКУЩИЙ ГОД
+// Автоматически обновляет год в копирайте футера.
 // ============================================
 function setCurrentYear() {
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+}
+
+// ============================================
+// ДАННЫЕ И ЛОГИКА ДОСТИЖЕНИЙ
+// ============================================
+const achievementsData = [
+  {
+    title: 'II место в Первенстве РФ',
+    desc: 'Сборная университета завоевала серебро на национальном первенстве и золото Чемпионата ЦФО в дисциплине «Продуктовое программирование». Этот результат подтвердил статус вуза как одного из сильнейших центров ИТ-подготовки в регионе.',
+    tag: 'Спорт.программирование',
+    color: 'bg-pastel-sky',
+    borderColor: 'border-sky'
+  },
+  {
+    title: 'III место «Лесное многоборье»',
+    desc: 'Команда магистров БГИТУ вошла в тройку лидеров среди вузов страны, успешно пройдя испытания по воспроизводству и защите лесов. Студенты также заняли второе место на специализированном этапе по имитации тушения лесного пожара.',
+    tag: 'Экология',
+    color: 'bg-pastel-mint',
+    borderColor: 'border-mint'
+  },
+  {
+    title: 'Победы в конкурсе «УМНИК»',
+    desc: 'Студенты регулярно выигрывают гранты на реализацию высокотехнологичных проектов. Успехи таких исследователей, как Вероника Смеян, обеспечивают коммерциализацию молодежных научных разработок вуза.',
+    tag: 'Наука',
+    color: 'bg-pastel-lavender',
+    borderColor: 'border-lavender'
+  }
+];
+
+function initAchievements() {
+  const grid = document.getElementById('achievementsGrid');
+  if (!grid) return;
+
+  // Очищаем содержимое перед рендером
+  grid.innerHTML = '';
+
+  achievementsData.forEach(item => {
+    const card = document.createElement('div');
+    card.className = `achievement-card ${item.borderColor} reveal`;
+    
+    // Иконка (кубок)
+    const iconSvg = `<svg class="achievement-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>`;
+
+    card.innerHTML = `
+      <div class="achievement-header">
+        <span class="achievement-tag ${item.color}">${item.tag}</span>
+        ${iconSvg}
+      </div>
+      <h3 class="achievement-title">${item.title}</h3>
+      <p class="achievement-desc">${item.desc}</p>
+    `;
+    
+    grid.appendChild(card);
+  });
+}
+
+// ============================================
+// СЕКЦИЯ "АБИТУРИЕНТУ" (FAQ и Форма)
+// ============================================
+
+// Инициализация аккордеона (FAQ)
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Закрываем все остальные пункты (чтобы был открыт только один)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+
+      // Переключаем текущий пункт
+      if (isActive) {
+        item.classList.remove('active');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px"; // Динамическая высота
+      }
+    });
+  });
+}
+
+// Обработка отправки формы
+function initApplyForm() {
+  const form = document.getElementById('applyForm');
+  const successMsg = document.getElementById('formSuccess');
+
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Предотвращаем перезагрузку страницы
+    
+    // Имитация отправки (здесь можно подключить API)
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    
+    btn.disabled = true;
+    btn.textContent = 'Отправка...';
+
+    // Собираем данные формы
+    const formData = {
+      name: document.getElementById('leadName').value,
+      phone: document.getElementById('leadPhone').value,
+      direction: document.getElementById('leadDirection').value
+    };
+    console.log('Lead Data:', formData);
+
+    // Имитация задержки сети
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      form.reset(); // Очистка полей
+      
+      // Показать сообщение об успехе
+      successMsg.style.display = 'flex';
+      
+      // Скрыть сообщение через 5 секунд
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+    }, 1000);
+  });
 }

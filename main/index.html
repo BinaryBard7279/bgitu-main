@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- 
+    МЕТА-ТЕГИ И НАСТРОЙКИ
+    Здесь мы указываем кодировку, настройки масштабирования для мобильных устройств,
+    заголовок вкладки браузера и описание для поисковиков.
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>БГИТУ IT-Институт — IT-образование в Брянске</title>
   <meta name="description" content="IT-образование в БГИТУ: кибербезопасность, искусственный интеллект, программная инженерия. Практика с 3 курса, трудоустройство после выпуска.">
   <meta name="author" content="БГИТУ">
   
+  <!-- Теги для соцсетей (Open Graph), чтобы ссылка красиво выглядела при отправке в мессенджерах -->
   <meta property="og:title" content="БГИТУ IT-Институт — IT-образование в Брянске">
   <meta property="og:description" content="Образовательный и карьерный трек в IT с гарантией трудоустройства. 5 направлений подготовки, практика в ведущих компаниях.">
   <meta property="og:type" content="website">
   
+  <!-- Подключение шрифтов (Inter) и иконок (FontAwesome) из внешних источников -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Подключение основного файла стилей -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
+  
+  <!-- 
+    ШАПКА (HEADER)
+    Содержит логотип, навигационное меню и кнопку подачи заявления.
+    При скролле меняет цвет фона (управляется JS).
+  -->
   <header id="header">
     <div class="container">
       <nav class="header-nav">
@@ -25,6 +40,7 @@
           БГИТУ <span class="logo-accent">IT-Институт</span>
         </a>
         
+        <!-- Меню с ссылками на секции -->
         <ul class="nav-links">
           <li><button class="nav-link" data-target="directions">Направления</button></li>
           <li><button class="nav-link" data-target="disciplines">Дисциплины</button></li>
@@ -39,8 +55,13 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <!-- Hero Section -->
+    <!-- 
+      СЕКЦИЯ HERO (Первый экран)
+      Самая важная часть. Содержит главный заголовок, призыв к действию и
+      декоративную анимацию из квадратов.
+    -->
     <section id="hero" class="hero">
       <div class="container">
         <div class="hero-grid">
@@ -66,6 +87,7 @@
             </div>
           </div>
           
+          <!-- Декоративные анимированные квадраты справа -->
           <div class="hero-visual">
             <div class="squares-composition">
               <div class="square square-1 bg-pastel-sky"></div>
@@ -80,7 +102,12 @@
         </div>
       </div>
     </section>
-    <!-- Directions Section (Carousel) -->
+
+    <!-- 
+      СЕКЦИЯ НАПРАВЛЕНИЙ (Слайдер/Карусель)
+      Здесь пользователь может листать карточки с описанием учебных программ.
+      Карточки генерируются через JavaScript.
+    -->
     <section id="directions" class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
@@ -104,74 +131,95 @@
         </div>
       </div>
     </section>
-    <!-- Disciplines Section -->
-    <section id="disciplines" class="section">
+
+    <!-- 
+      СЕКЦИЯ ДИСЦИПЛИН
+      Сетка карточек с технологиями, которые изучают студенты.
+    -->
+    <section id="disciplines" class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title">Технологический стек</h2>
+          <h2 class="section-title">Ключевые дисциплины</h2>
           <p class="section-description">
-            Изучайте востребованные технологии под руководством практикующих специалистов
+            Актуальный технологический стек, который осваивают наши студенты
           </p>
         </div>
         
         <div class="disciplines-grid">
-          <!-- Java -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-coral"></div>
-            <h3 class="discipline-title">Java</h3>
+          <!-- Карточка 1 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-pastel-peach">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <h4 class="discipline-title">Java Ecosystem</h4>
             <p class="discipline-description">
-              Разработка серверных приложений, ООП, среды разработки
+              <strong>Backend & Enterprise.</strong> Объектно-ориентированное программирование, Spring Framework, Hibernate и микросервисная архитектура.
+            </p>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-pastel-lavender">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h4 class="discipline-title">Machine Learning</h4>
+            <p class="discipline-description">
+              <strong>Data Science.</strong> Обучение нейросетей, работа с Big Data, библиотеки TensorFlow, PyTorch и алгоритмы компьютерного зрения.
+            </p>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-pastel-sky">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="discipline-title">Сетевая безопасность</h4>
+            <p class="discipline-description">
+              <strong>Cybersecurity.</strong> Анализ уязвимостей, Pen-testing, защита облачных инфраструктур и криптография.
+            </p>
+          </div>
+
+          <!-- Карточка 4 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-pastel-mint">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h4 class="discipline-title">Web-технологии</h4>
+            <p class="discipline-description">
+              <strong>Fullstack.</strong> Современный фронтенд (React/Vue), серверная часть на Node.js и проектирование REST API.
+            </p>
+          </div>
+
+          <!-- Карточка 5 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-pastel-sage">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h4 class="discipline-title">Базы данных</h4>
+            <p class="discipline-description">
+              <strong>Data Engineering.</strong> Проектирование сложных SQL-систем (PostgreSQL) и работа с NoSQL решениями (MongoDB, Redis).
             </p>
           </div>
           
-          <!-- Python -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-mint"></div>
-            <h3 class="discipline-title">Python</h3>
+          <!-- Карточка 6 -->
+          <div class="discipline-card reveal hover-lift">
+            <div class="discipline-icon bg-secondary">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h4 class="discipline-title">DevOps & Cloud</h4>
             <p class="discipline-description">
-              Машинное обучение, нейросети, прикладная разработка
-            </p>
-          </div>
-          
-          <!-- 1С -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-peach"></div>
-            <h3 class="discipline-title">1С</h3>
-            <p class="discipline-description">
-              Разработка бизнес-приложений, адаптация конфигураций
-            </p>
-          </div>
-          
-          <!-- Frontend -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-sky"></div>
-            <h3 class="discipline-title">Frontend</h3>
-            <p class="discipline-description">
-              HTML/CSS, React, современные JavaScript-фреймворки
-            </p>
-          </div>
-          
-          <!-- Mobile -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-lavender"></div>
-            <h3 class="discipline-title">Mobile</h3>
-            <p class="discipline-description">
-              Кроссплатформенная и нативная мобильная разработка
-            </p>
-          </div>
-          
-          <!-- QA -->
-          <div class="discipline-card hover-lift reveal" data-stagger>
-            <div class="discipline-icon bg-pastel-sage"></div>
-            <h3 class="discipline-title">QA & Testing</h3>
-            <p class="discipline-description">
-              Тестирование ПО, автоматизация, контроль качества
+              <strong>Infrastructure.</strong> Контейнеризация (Docker, K8s), CI/CD процессы и администрирование Linux серверов.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Features Section -->
+
+    <!-- 
+      СЕКЦИЯ ПРЕИМУЩЕСТВ (FEATURES)
+      Список плюсов обучения (общежитие, военный центр и т.д.).
+      data-stagger используется JS для последовательной анимации появления.
+    -->
     <section id="features" class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
@@ -341,7 +389,12 @@
         </div>
       </div>
     </section>
-    <!-- Faculty Section -->
+
+    <!-- 
+      СЕКЦИЯ ПРЕПОДАВАТЕЛЕЙ (Лента)
+      Бесконечная лента с карточками преподавателей.
+      Поддерживает перетаскивание мышкой (реализовано в JS).
+    -->
     <section id="faculty" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -350,55 +403,24 @@
             Занятия ведут практикующие специалисты ведущих IT-компаний региона
           </p>
         </div>
-        
-        <div class="faculty-grid">
-          <!-- Faculty 1 -->
-          <div class="faculty-card hover-lift reveal" data-stagger>
-            <div class="faculty-photo bg-pastel-sky"></div>
-            <h3 class="faculty-name">Иванов И.И.</h3>
-            <p class="faculty-company">TechSoft</p>
-            <div class="faculty-tags">
-              <span class="faculty-tag">Java</span>
-              <span class="faculty-tag">Backend архитектура</span>
-            </div>
-          </div>
-          
-          <!-- Faculty 2 -->
-          <div class="faculty-card hover-lift reveal" data-stagger>
-            <div class="faculty-photo bg-pastel-mint"></div>
-            <h3 class="faculty-name">Петрова А.С.</h3>
-            <p class="faculty-company">DataCorp</p>
-            <div class="faculty-tags">
-              <span class="faculty-tag">Аналитика данных</span>
-              <span class="faculty-tag">Python</span>
-            </div>
-          </div>
-          
-          <!-- Faculty 3 -->
-          <div class="faculty-card hover-lift reveal" data-stagger>
-            <div class="faculty-photo bg-pastel-peach"></div>
-            <h3 class="faculty-name">Сидоров В.К.</h3>
-            <p class="faculty-company">SoftSol</p>
-            <div class="faculty-tags">
-              <span class="faculty-tag">1С-разработка</span>
-              <span class="faculty-tag">Бизнес-аналитика</span>
-            </div>
-          </div>
-          
-          <!-- Faculty 4 -->
-          <div class="faculty-card hover-lift reveal" data-stagger>
-            <div class="faculty-photo bg-pastel-lavender"></div>
-            <h3 class="faculty-name">Козлова М.А.</h3>
-            <p class="faculty-company">ГК Иннотех</p>
-            <div class="faculty-tags">
-              <span class="faculty-tag">Frontend</span>
-              <span class="faculty-tag">JavaScript</span>
-            </div>
-          </div>
+
+        <div class="faculty-tape">
+          <button type="button" class="faculty-arrow faculty-prev" id="facultyPrev" aria-label="Назад">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" class="faculty-arrow faculty-next" id="facultyNext" aria-label="Вперёд">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <div class="faculty-track" id="facultyTrack"></div>
         </div>
       </div>
     </section>
-    <!-- Roadmap Section -->
+
+    <!-- 
+      СЕКЦИЯ ДОРОЖНАЯ КАРТА (ROADMAP)
+      Интерактивная таблица, показывающая какие предметы изучаются на каком курсе.
+      При наведении появляется всплывающая подсказка.
+    -->
     <section id="roadmap" class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
@@ -408,12 +430,12 @@
           </p>
         </div>
         
-        <!-- Tooltip -->
+        <!-- Контейнер для всплывающей подсказки (заполняется JS) -->
         <div id="course-tooltip" class="course-tooltip"></div>
         
         <div class="roadmap-wrapper reveal">
           <div class="roadmap-container">
-            <!-- Semester headers -->
+            <!-- Заголовки семестров -->
             <div class="roadmap-headers">
               <div class="semester-header">1 сем.</div>
               <div class="semester-header">2 сем.</div>
@@ -425,10 +447,10 @@
               <div class="semester-header">8 сем.</div>
             </div>
             
-            <!-- Course rows -->
+            <!-- Сетка курсов (заполняется JS) -->
             <div class="roadmap-rows" id="roadmap-grid"></div>
             
-            <!-- Year markers -->
+            <!-- Маркеры курсов (годов обучения) -->
             <div class="year-markers">
               <div class="year-marker">1 курс</div>
               <div class="year-marker">2 курс</div>
@@ -440,7 +462,198 @@
       </div>
     </section>
   </main>
-  <!-- Footer -->
+
+  <!-- 
+    СЕКЦИЯ TIMELINE
+    Вертикальный список с подробным описанием программы обучения по семестрам.
+  -->
+  <section id="curriculum-timeline" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Пример учебного плана (Информатика)</h2>
+          <p class="section-description">
+            Посеместровый разбор ключевых дисциплин и навыков на примере направления ИВТ
+          </p>
+        </div>
+        
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-marker bg-pastel-sky">1</div>
+            <div class="timeline-content hover-lift">
+              <span class="timeline-term">1 семестр</span>
+              <h3 class="timeline-heading">Основы программирования</h3>
+              <p class="timeline-desc">
+                Введение в алгоритмизацию, базовый синтаксис C++, работа с типами данных, циклами и функциями. Написание первых консольных приложений.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker bg-pastel-mint">2</div>
+            <div class="timeline-content hover-lift">
+              <span class="timeline-term">2 семестр</span>
+              <h3 class="timeline-heading">Алгоритмы и структуры данных</h3>
+              <p class="timeline-desc">
+                Изучение сортировок, поиска, динамических массивов, стеков и деревьев. Оценка сложности алгоритмов (Big O notation).
+              </p>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-marker bg-pastel-peach">3</div>
+            <div class="timeline-content hover-lift">
+              <span class="timeline-term">3 семестр</span>
+              <h3 class="timeline-heading">Объектно-ориентированное программирование</h3>
+              <p class="timeline-desc">
+                Классы, наследование, полиморфизм и инкапсуляция. Паттерны проектирования и создание приложений на Java/C#.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker bg-pastel-lavender">4</div>
+            <div class="timeline-content hover-lift">
+              <span class="timeline-term">4 семестр</span>
+              <h3 class="timeline-heading">Базы данных и SQL</h3>
+              <p class="timeline-desc">
+                Проектирование реляционных БД, нормализация таблиц. Написание сложных SQL-запросов, администрирование PostgreSQL/MySQL.
+              </p>
+            </div>
+          </div>
+
+           <div class="timeline-item reveal">
+            <div class="timeline-marker bg-pastel-sage">5</div>
+            <div class="timeline-content hover-lift">
+              <span class="timeline-term">5 семестр</span>
+              <h3 class="timeline-heading">Web-разработка и фреймворки</h3>
+              <p class="timeline-desc">
+                Создание клиент-серверных приложений. React/Vue для фронтенда и Spring/ASP.NET для бэкенда. Разработка REST API.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      СЕКЦИЯ ДОСТИЖЕНИЙ (ACHIEVEMENTS)
+      Сюда JS добавляет карточки с успехами студентов (хакатоны, конкурсы).
+    -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Реальные достижения</h2>
+          <p class="section-description">
+            Победы в хакатонах, научные гранты и успешные карьеры наших студентов
+          </p>
+        </div>
+        
+        <!-- Контейнер для карточек (заполняется JS) -->
+        <div class="achievements-grid" id="achievementsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 
+      СЕКЦИЯ "АБИТУРИЕНТУ" (APPLY & FAQ)
+      Содержит часто задаваемые вопросы (аккордеон) и форму обратной связи.
+    -->
+    <section id="apply" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Абитуриенту</h2>
+          <p class="section-description">
+            Ответы на частые вопросы и быстрая подача заявки
+          </p>
+        </div>
+
+        <div class="apply-grid">
+          <!-- Левая колонка: FAQ -->
+          <div class="faq-column reveal">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Какие экзамены ЕГЭ нужны?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Обязательные: Русский язык, Профильная математика. По выбору: Информатика (рекомендуется) или Физика.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Какой проходной балл?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Проходной балл меняется каждый год. В прошлом году средний балл на бюджет составил 180+. Рекомендуем подавать документы даже с меньшими баллами — шансы есть всегда.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Есть ли общежитие?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Да, БГИТУ предоставляет общежитие всем иногородним студентам очной формы обучения. Студгородок находится в 5 минутах ходьбы от учебных корпусов.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Можно ли учиться платно?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Да, если не хватило баллов на бюджет, можно заключить договор. Стоимость обучения фиксируется на весь период. Возможна оплата материнским капиталом.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правая колонка: Форма -->
+          <div class="form-column reveal">
+            <form class="apply-form" id="applyForm">
+              <div class="form-header">
+                <h3 class="form-title">Оставить заявку</h3>
+                <p class="form-subtitle">Консультация приемной комиссии</p>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" class="form-input" id="leadName" placeholder="Ваше имя" required>
+              </div>
+              
+              <div class="form-group">
+                <input type="tel" class="form-input" id="leadPhone" placeholder="+7 (999) 000-00-00" required>
+              </div>
+              
+              <div class="form-group">
+                <select class="form-select" id="leadDirection">
+                  <option value="" disabled selected>Интересующее направление</option>
+                  <option value="cyber">Кибербезопасность</option>
+                  <option value="ai">Искусственный интеллект</option>
+                  <option value="cad">Автоматизированное проектирование</option>
+                  <option value="isit">Информационные системы</option>
+                  <option value="soft">Программная инженерия</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">Отправить</button>
+              <p class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+
+              <!-- Сообщение об успехе (по умолчанию скрыто) -->
+              <div id="formSuccess" class="form-success" style="display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Заявка принята! Мы свяжемся с вами.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- 
+    ПОДВАЛ (FOOTER)
+    Контакты, ссылки и копирайт.
+  -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -521,6 +734,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- Подключение основного файла скриптов -->
   <script src="script.js"></script>
 </body>
 </html>
